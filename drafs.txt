@@ -1,8 +1,8 @@
 services:
   frontend:
-    image: traefik/whoami
+    image: jmuniz1985:golang-web 
     ports:
-      - "80:80"
+      - "80:443"
     networks:
       - front-tier
       - back-tier
@@ -12,30 +12,28 @@ services:
 #      - server-certificate
 
   backend:
-    image: traefik/whoami
+    image: jmuniz1985:golang-api
+    ports:
+      - "80:12345"
 #    volumes:
 #      - db-data:/etc/data
     networks:
       - back-tier
-
-    deploy:
-      mode: replicated
-      replicas: 3
-      endpoint_mode: dnsrr
 
 #volumes:
 #  db-data:
 #    driver: flocker
 #    driver_opts:
 #      size: "1GiB"
-#configs:
-#  httpd-config:
-#    external: false
-#    file: /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
-#secrets:
-#  server-certificate:
-#    external: false
-#    file: /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
+
+configs:
+  httpd-config:
+    external: false
+    file: /etc/ssl/certs/ca-certificates.crt
+secrets:
+  server-certificate:
+    external: false
+    file: /etc/ssl/certs/ca-certificates.crt
 
 networks:
   # The presence of these objects is sufficient to define them

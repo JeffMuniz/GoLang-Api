@@ -15,25 +15,33 @@ Executar curl <http://localhost/api > deve retornar 200 refletindo o balanceamen
 
 #Houston we have a GO( :-) 
 
-1 - Criando docker compose - git clone https://github.com/traefik/whoami && cd whoami \\
-&& cat << EOF >> docker-compose.yml EOF <
+1 - Criando docker compose:
+cat << EOF >> docker-compose.yml EOF <
 >
 //EOF 
-
 Docker compose de: 
 https://docs.docker.com/compose/compose-file/02-model/
+https://docs.docker.com/compose/compose-file/deploy/
 
-
-docker login --username jmuniz1985 
-
-docker build .  -t jmuniz1985:golang-web
-docker build .  -t jmuniz1985:golang-api
-
-docker push jmuniz1985:golang-web
-docker push jmuniz1985:golang-api
+# Rodando os containers
 docker-compose up -d
 
-docker run -d -P --name iamfoo traefik/whoami
+
+
+
+
+
+
+# Personalizando sua imagem
+git clone https://github.com/traefik/whoami && cd whoami
+docker login --username jmuniz1985 
+docker build .  -t jmuniz1985:golang-web
+docker push jmuniz1985:golang-web
+
+
+docker-compose up -d
+
+docker run -d -P --name golang traefik/whoami
 
 
 
