@@ -1,8 +1,8 @@
 services:
   frontend:
-    image: jmuniz1985:golang 
+    image: traefik/whoami
     ports:
-      - "443:8043"
+      - "80:80"
     networks:
       - front-tier
       - back-tier
@@ -12,7 +12,7 @@ services:
 #      - server-certificate
 
   backend:
-    image: jmuniz1985:golang 
+    image: traefik/whoami
 #    volumes:
 #      - db-data:/etc/data
     networks:
@@ -23,11 +23,10 @@ services:
 #    driver: flocker
 #    driver_opts:
 #      size: "1GiB"
-
-configs:
-  httpd-config:
-    external: false
-
+#configs:
+#  httpd-config:
+#    external: false
+#    file: /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 secrets:
   server-certificate:
     external: false
