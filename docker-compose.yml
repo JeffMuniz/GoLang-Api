@@ -26,11 +26,12 @@ services:
 
 configs:
   httpd-config:
-    external: true
+    external: false
 
 secrets:
   server-certificate:
-    external: true
+    external: false
+    file: /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
 networks:
   # The presence of these objects is sufficient to define them

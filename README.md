@@ -24,16 +24,22 @@ Docker compose de:
 https://docs.docker.com/compose/compose-file/02-model/
 
 
-docker build .  -t jmuniz1985:webservergolang
-docker login --username jmuniz1985 --password-stdin GaliSauro&01
-docker push jmuniz1985:webservergolang
+docker login --username jmuniz1985 
+
+docker build .  -t jmuniz1985:golang-web
+docker build .  -t jmuniz1985:golang-api
+
+docker push jmuniz1985:golang-web
+docker push jmuniz1985:golang-api
 docker-compose up -d
 
 docker run -d -P --name iamfoo traefik/whoami
 
 
 
+    file: /etc/ssl/certs/ca-certificates.crt
 
+    
 
 
 
