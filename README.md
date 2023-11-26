@@ -1,3 +1,65 @@
+#ReadMe SysManager 
+
+O que está acontecendo aqui?
+WhoAmi é uma comando do linuz que retorna variáveis de sistema como usuário atual;
+Trafik (https://github.com/traefik/whoami) escereu uma API em Golang:
+ - https://github.com/golang/go - Código open source mantido pela comunidade
+ - Derivado do original Go https://go.dev/ Código mantido pela Google
+
+Qual o nosso objetivo?
+Fazer o deploy dessa API com os resquisitos fuincionais:
+Usando docker compose crie o load balancer balanceando a porta 80 entre 3 imagens dockerizadas.
+Executar curl <http://localhost/api > deve retornar 200 refletindo o balanceamento
+* container da applição deveria ser capaz de rodar separadamente na porta 8080 sem usar o docker-compose
+
+
+#Houston we have a GO( :-) 
+
+1 - Criando docker compose - git clone https://github.com/traefik/whoami && cd whoami \\
+&& cat << EOF >> docker-compose.yml EOF <
+>
+//EOF 
+
+Docker compose de: 
+https://docs.docker.com/compose/compose-file/02-model/
+
+
+docker build .  -t jmuniz1985:webservergolang
+docker login --username jmuniz1985 --password-stdin GaliSauro&01
+docker push jmuniz1985:webservergolang
+docker-compose up -d
+
+docker run -d -P --name iamfoo traefik/whoami
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+READ ME ORIGINAL Traefik
+
 # whoami
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/traefik/whoami.svg)](https://hub.docker.com/r/traefik/whoami/)
