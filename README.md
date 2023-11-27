@@ -1,189 +1,80 @@
-#ReadMe SysManager 
-
-O que está acontecendo aqui?
-WhoAmi é uma comando do linuz que retorna variáveis de sistema como usuário atual;
-Trafik (https://github.com/traefik/whoami) escereu uma API em Golang:
- - https://github.com/golang/go - Código open source mantido pela comunidade
- - Derivado do original Go https://go.dev/ Código mantido pela Google
-
-Qual o nosso objetivo?
-Fazer o deploy dessa API com os resquisitos fuincionais:
-Usando docker compose crie o load balancer balanceando a porta 80 entre 3 imagens dockerizadas.
-Executar curl <http://localhost/api > deve retornar 200 refletindo o balanceamento
-* container da applição deveria ser capaz de rodar separadamente na porta 8080 sem usar o docker-compose
+Short Description of the work: I started doing things from zero and thought it would be neede something more complex to acheive the requirements. Although for Prove Of Concept and developers to be able to use this, only Docker and compose are enough
 
 
-#Houston we have a GO( :-) 
 
-1 - Criando docker compose:
-cat << EOF >> docker-compose.yml EOF <
->
-//EOF 
-Docker compose de: 
+* - Choice of docker image (prebuilt or otherwise) and reasoning for:
+--build-arg			Set build-time variables
+  
+
+#ReadMe Docker Challenge 
+
+
+
+
+1. Why would you use a local docker-compose environment?
+Docker compose is required for building named services (not IP). To fit the archechture proposed by the chalenge using load balancing, multiple networks etc.
+I also need to clone trafik/whoami to create the docker image that will be used in containers locally, and be able to use the compose application model.
+
+
+
+2. Is this Dockerfile ready to be used in production?
+We welcome any comments you canoffer regarding production readiness of this solution.
+
+# DEVELOP ENVIROMENT
+This means we're using minimal resources (4 containers), just to prove the concept
+To Run in production is better to at least 2 frontends, and 6 containers, kubernetes deployments to prevent human erros, if rollback is needed
+Will also be needed a public ip address, or exposing publicly via services. 
+A firewall also is mandatory, as well existing networks integrations.
+Https, CA and SSL configuration is required as well
+
+Archtechture Model
+
+image: ComposeModel.png
 https://docs.docker.com/compose/compose-file/02-model/
-https://docs.docker.com/compose/compose-file/deploy/
 
-# Rodando os containers
+
+#Houston we have a GO(Lang :-)  - Instructions for Using docker compose to create load balancing port 80 between 3 dockerized images * And 1 FrontEnd
+
+Please install git-scm and docker and compose before this Download and install, may be done follow this: https://docs.docker.com/compose/install/
+
+1 - git clone this repo and cd to folder
+https://github.com/JeffMuniz/GoLang-Api.git
+cd golang-api
+
+2 - Build image
+docker build .
+
+3 - Run containers load balancers and all requirements for developing
 docker-compose up -d
 
+4 - Test
+curl <http://localhost>
 
-
-
-
-
-
-# Personalizando sua imagem
-git clone https://github.com/traefik/whoami && cd whoami
-docker login --username jmuniz1985 
-docker build .  -t jmuniz1985:golang-web
-docker push jmuniz1985:golang-web
-
-
-docker-compose up -d
-
+* - Container running separately on port 80 WITHOUT docker-compose:
 docker run -d -P --name golang traefik/whoami
 
 
-
-    file: /etc/ssl/certs/ca-certificates.crt
-
-    
-
-
-
-
+What's going on here?
+Deploy this GoLang API with functional requirements
+WhoAmi is a Linux command that returns system variables such as the current user;
+Trafik (https://github.com/traefik/whoami) wrote an API in Golang:
+  - https://github.com/golang/go - Open source code maintained by the community
+  - Derived from the original Go https://go.dev/ Code maintained by Google
 
 
 
 
+# Personalizing your image
+git clone https://github.com/traefik/whoami && cd whoami
+docker login --username <you-docker-hub>
+
+Tweak Dockerfile and save
+docker build .  -t <you-docker-hub>:golang-web
+docker push <you-docker-hub>:golang-web
+docker-compose up -d
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-READ ME ORIGINAL Traefik
-
-# whoami
-
-[![Docker Pulls](https://img.shields.io/docker/pulls/traefik/whoami.svg)](https://hub.docker.com/r/traefik/whoami/)
-[![Build Status](https://github.com/traefik/whoami/workflows/Main/badge.svg?branch=master)](https://github.com/traefik/whoami/actions)
-
-Tiny Go webserver that prints OS information and HTTP request to output.
-
-## Usage
-
-### Paths
-
-#### `/[?wait=d]`
-
-Returns the whoami information (request and network information).
-
-The optional `wait` query parameter can be provided to tell the server to wait before sending the response.
-The duration is expected in Go's [`time.Duration`](https://golang.org/pkg/time/#ParseDuration) format (e.g. `/?wait=100ms` to wait 100 milliseconds).
-
-The optional `env` query parameter can be set to `true` to add the environment variables to the response.
-
-#### `/api`
-
-Returns the whoami information as JSON.
-
-The optional `env` query parameter can be set to `true` to add the environment variables to the response.
-
-#### `/bench`
-
-Always return the same response (`1`).
-
-#### `/data?size=n[&unit=u]`
-
-Creates a response with a size `n`.
-
-The unit of measure, if specified, accepts the following values: `KB`, `MB`, `GB`, `TB` (optional, default: bytes).
-
-#### `/echo`
-
-WebSocket echo.
-
-#### `/health`
-
-Heath check.
-
-- `GET`, `HEAD`, ...: returns a response with the status code defined by the `POST`
-- `POST`: changes the status code of the `GET` (`HEAD`, ...) response.
-
-### Flags
-
-| Flag      | Env var              | Description                             |
-|-----------|----------------------|-----------------------------------------|
-| `cert`    |                      | Give me a certificate.                  |
-| `key`     |                      | Give me a key.                          |
-| `cacert`  |                      | Give me a CA chain, enforces mutual TLS |
-| `port`    | `WHOAMI_PORT_NUMBER` | Give me a port number. (default: `80`)  |
-| `name`    | `WHOAMI_NAME`        | Give me a name.                         |
-| `verbose` |                      | Enable verbose logging.                 |
-
-## Examples
-
-```console
-$ docker run -d -P --name iamfoo traefik/whoami
-
-$ docker inspect --format '{{ .NetworkSettings.Ports }}'  iamfoo
-map[80/tcp:[{0.0.0.0 32769}]]
-
-$ curl "http://0.0.0.0:32769"
-Hostname :  6e0030e67d6a
-IP :  127.0.0.1
-IP :  ::1
-IP :  172.17.0.27
-IP :  fe80::42:acff:fe11:1b
-GET / HTTP/1.1
-Host: 0.0.0.0:32769
-User-Agent: curl/7.35.0
-Accept: */*
-```
-
-```console
-# updates health check status
-$ curl -X POST -d '500' http://localhost:80/health
-
-# calls the health check
-$ curl -v http://localhost:80/health
-*   Trying ::1:80...
-* TCP_NODELAY set
-* Connected to localhost (::1) port 80 (#0)
-> GET /health HTTP/1.1
-> Host: localhost:80
-> User-Agent: curl/7.65.3
-> Accept: */*
-> 
-* Mark bundle as not supporting multiuse
-< HTTP/1.1 500 Internal Server Error
-< Date: Mon, 16 Sep 2019 22:52:40 GMT
-< Content-Length: 0
-```
-
-```console
-docker run -d -P -v ./certs:/certs --name iamfoo traefik/whoami --cert /certs/example.cert --key /certs/example.key
-```
-
-```yml
-version: '3.9'
-
-services:
-  whoami:
-    image: traefik/whoami
-    command:
-       # It tells whoami to start listening on 2001 instead of 80
-       - --port=2001
-       - --name=iamfoo
-```
+Documentation to Create docker-compose.yml
+https://docs.docker.com/compose/compose-file/02-model/
+https://docs.docker.com/compose/compose-file/deploy/
