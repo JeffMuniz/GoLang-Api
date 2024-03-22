@@ -1,20 +1,13 @@
-Short Description of the work: I started doing things from zero and thought it would be neede something more complex to acheive the requirements. Although for Prove Of Concept and developers to be able to use this, only Docker and compose are enough
-
-
+to be able to use this, only Docker and compose are enough
 
 * - Choice of docker image (prebuilt or otherwise) and reasoning for:
 --build-arg			Set build-time variables
   
-
 #ReadMe Docker Challenge 
-
-
-
 
 1. Why would you use a local docker-compose environment?
 Docker compose is required for building named services (not IP). To fit the archechture proposed by the chalenge using load balancing, multiple networks etc.
 I also need to clone trafik/whoami to create the docker image that will be used in containers locally, and be able to use the compose application model.
-
 
 
 2. Is this Dockerfile ready to be used in production?
@@ -33,7 +26,7 @@ image: ComposeModel.png
 https://docs.docker.com/compose/compose-file/02-model/
 
 
-#Houston we have a GO(Lang :-)  - Instructions for Using docker compose to create load balancing port 80 between 3 dockerized images * And 1 FrontEnd
+#Houston we have a GO(Lang :-)  - Using docker compose to create load balancing port 80 between 3 dockerized images * And 1 FrontEnd
 
 Please install git-scm and docker and compose before this Download and install, may be done follow this: https://docs.docker.com/compose/install/
 
