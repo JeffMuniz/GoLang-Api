@@ -13,7 +13,7 @@ I also need to clone trafik/whoami to create the docker image that will be used 
 2. Is this Dockerfile ready to be used in production?
 We welcome any comments you canoffer regarding production readiness of this solution.
 
-# DEVELOP ENVIROMENT
+# DEVELOP ENVIRONMENT
 This means we're using minimal resources (4 containers), just to prove the concept
 To Run in production is better to at least 2 frontends, and 6 containers, kubernetes deployments to prevent human erros, if rollback is needed
 Will also be needed a public ip address, or exposing publicly via services. 
