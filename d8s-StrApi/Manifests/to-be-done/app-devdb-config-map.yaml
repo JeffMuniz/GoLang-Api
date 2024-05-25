@@ -1,0 +1,26 @@
+apiVersion: v1
+data:
+  MYSQL_ROOT_PASSWORD: strapi
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-04-26T05:18:30Z"
+  labels:
+    app: app-devdb
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:MYSQL_ROOT_PASSWORD: {}
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+    manager: GoogleCloudConsole
+    operation: Update
+    time: "2023-04-26T05:18:30Z"
+  name: app-devdb-config-wywv
+  namespace: default
+  resourceVersion: "1170151"
+  uid: 56899401-2480-42bf-b1c1-92ee1c083e7f
