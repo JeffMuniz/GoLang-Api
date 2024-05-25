@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-dev
+  namespace: default
+  labels:
+    app: app-dev
+spec:
+  selector:
+    matchLabels:
+      app: app-dev
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: app-dev
+    spec:
+      containers:
+       —name: app-dev
+          image: jmuniz1985/app-dev
+          ports:
+           —containerPort: 1337

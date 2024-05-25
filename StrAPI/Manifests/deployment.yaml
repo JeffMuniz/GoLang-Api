@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: claw
+spec:
+  selector:
+    matchLabels:
+      app: claw
+  revisionHistoryLimit: 2 # Default to 10 if not specified
+  template:
+    metadata:
+      labels:
+        app: claw # the label for the pods and the deployments
+    spec:
+      containers:
+      - name: claw
+        image: acraksmacnadev.azurecr.io/catalog-integration/claw:latest # IMPORTANT: update with your own repository
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80 # the application listens to this port
+        envFrom:
+          - configMapRef:
+              name: sharedapps  # the name of the Kubernetes secret containing the data
+          - configMapRef:
+              name: claw # the name of the Kubernetes secret containing the data
+        resources:
+          requests: # minimum resources required
+            cpu: 100m
+            memory: 64Mi
+          limits: # maximum resources allocated
+            cpu: 250m
+            memory: 256Mi
+      #   readinessProbe: # is the container ready to receive traffic?
+      #     httpGet:
+      #       port: 3000
+      #       path: /healthz
+      #   livenessProbe: # is the container healthy?
+      #     httpGet:
+      #       port: 3000
+      #       path: /healthz
+      # affinity:
+      #   nodeAffinity:
+      #     preferredDuringSchedulingIgnoredDuringExecution:
+      #     - weight: 1
+      #       preference:
+      #         matchExpressions:
+      #         - key: app
+      #           operator: In
+      #           values:
+      #           - app

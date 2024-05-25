@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: claw
+  namespace: alaskian-dev
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: availability.catalog-integration.dev.10-186-28-100.nip.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: claw
+            port:
+              number: 80

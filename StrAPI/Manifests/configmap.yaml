@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: claw
+  namespace: alaskian-dev
+data:
+  Consul__Key: dev/catalog/integrations/availability/api

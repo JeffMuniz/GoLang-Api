@@ -1,0 +1,37 @@
+variables:
+  - template: '../shared/templates/variables.yml'  # Shared Variables
+
+  ### Pipeline App Custom configurations
+  - name: App.Name
+    value: 'claw'
+
+  - name: App.SourcePath
+    value: 'src/Availability/Api'
+
+trigger:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - '$(App.SourcePath)*'
+      - 'src/Shared*'
+      - 'pipelines/k8s/$(App.Name)*'
+      - 'pipelines/k8s/shared**'
+
+resources:
+  - repo: self
+
+extends:
+  template: '../shared/templates/pipeline.yml' # Shared Pipeline
+  parameters:
+    Appname: $(App.Name)
+    DeploymentEnvironment_DEV: $(App.DeploymentEnvironment_DEV)
+    DeploymentEnvironment_QA: $(App.DeploymentEnvironment_QA)
+    DockerfilePath: $(App.DockerfilePath)
+    ContainerRegistry: $(ContainerRegistry)
+    ImageRepository: $(App.ImageRepository)
+    ImageTag: $(App.ImageTag)
+    ImagePullSecret: $(App.ImagePullSecret)
+    DockerRegistryServiceConnection: $(DockerRegistryServiceConnection)
+    VmImage: $(VmImage)
