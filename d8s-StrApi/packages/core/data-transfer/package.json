@@ -52,10 +52,10 @@
     "lodash": "4.17.21",
     "ora": "5.4.1",
     "resolve-cwd": "3.0.0",
-    "semver": "7.6.0",
+    "semver": "7.6.1",
     "stream-chain": "2.2.5",
     "stream-json": "1.8.0",
-    "tar": "7.0.0",
+    "tar": "7.0.1",
     "tar-stream": "2.2.0",
     "ws": "8.13.0"
   },

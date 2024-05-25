@@ -171,7 +171,7 @@
     "package-json": "7.0.0",
     "pkg-up": "3.1.0",
     "qs": "6.11.1",
-    "semver": "7.6.0",
+    "semver": "7.6.1",
     "statuses": "2.0.1",
     "typescript": "5.2.2",
     "yalc": "1.0.0-pre.53",
