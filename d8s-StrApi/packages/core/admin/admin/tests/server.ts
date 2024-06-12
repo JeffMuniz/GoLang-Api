@@ -213,7 +213,7 @@ export const server = setupServer(
           communityEdition: false,
           currentEnvironment: 'development',
           nodeVersion: 'v14.13.1',
-          strapiVersion: '3.6.0',
+          strapiVersion: '3.9.7',
         })
       )
     ),

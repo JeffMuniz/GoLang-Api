@@ -27,7 +27,7 @@ __metadata:
   resolution: "@actions/github@npm:5.1.1"
   dependencies:
     "@actions/http-client": "npm:^2.0.1"
-    "@octokit/core": "npm:^3.6.0"
+    "@octokit/core": "npm:^3.9.7"
     "@octokit/plugin-paginate-rest": "npm:^2.17.0"
     "@octokit/plugin-rest-endpoint-methods": "npm:^5.13.0"
   checksum: 2210bd7f8e1e8b407b7df74a259523dc4c63f4ad3a6bfcc0d7867b6e9c3499bd3e25d7de7a9a1bbd0de3be441a8832d5c0b5c0cff3036cd477378c0ec5502434
@@ -4855,9 +4855,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/core@npm:^3.6.0":
-  version: 3.6.0
-  resolution: "@octokit/core@npm:3.6.0"
+"@octokit/core@npm:^3.9.7":
+  version: 3.9.7
+  resolution: "@octokit/core@npm:3.9.7"
   dependencies:
     "@octokit/auth-token": "npm:^2.4.4"
     "@octokit/graphql": "npm:^4.5.8"
@@ -11825,7 +11825,7 @@ __metadata:
   resolution: "are-we-there-yet@npm:2.0.0"
   dependencies:
     delegates: "npm:^1.0.0"
-    readable-stream: "npm:^3.6.0"
+    readable-stream: "npm:^3.9.7"
   checksum: ea6f47d14fc33ae9cbea3e686eeca021d9d7b9db83a306010dd04ad5f2c8b7675291b127d3fcbfcbd8fec26e47b3324ad5b469a6cc3733a582f2fe4e12fc6756
   languageName: node
   linkType: hard
@@ -11835,7 +11835,7 @@ __metadata:
   resolution: "are-we-there-yet@npm:3.0.1"
   dependencies:
     delegates: "npm:^1.0.0"
-    readable-stream: "npm:^3.6.0"
+    readable-stream: "npm:^3.9.7"
   checksum: 390731720e1bf9ed5d0efc635ea7df8cbc4c90308b0645a932f06e8495a0bf1ecc7987d3b97e805f62a17d6c4b634074b25200aa4d149be2a7b17250b9744bc4
   languageName: node
   linkType: hard
@@ -13392,7 +13392,7 @@ __metadata:
     is-binary-path: "npm:~2.1.0"
     is-glob: "npm:~4.0.1"
     normalize-path: "npm:~3.0.0"
-    readdirp: "npm:~3.6.0"
+    readdirp: "npm:~3.9.7"
   dependenciesMeta:
     fsevents:
       optional: true
@@ -15386,7 +15386,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"duplexify@npm:^3.5.0, duplexify@npm:^3.6.0":
+"duplexify@npm:^3.5.0, duplexify@npm:^3.9.7":
   version: 3.7.1
   resolution: "duplexify@npm:3.7.1"
   dependencies:
@@ -17494,7 +17494,7 @@ __metadata:
     semver: "npm:^7.3.5"
     tapable: "npm:^2.2.1"
   peerDependencies:
-    typescript: ">3.6.0"
+    typescript: ">3.9.7"
     webpack: ^5.11.0
   checksum: 3399ea114d9397da5e51baaa1cf2ca704f4616c8255df672889cafc2a823f77e8bf9913133852d29d676657b1d40e4a2fba8eb9fafee09e00faeda924289220e
   languageName: node
@@ -18045,7 +18045,7 @@ __metadata:
     better-sqlite3: "npm:8.6.0"
     lodash: "npm:4.17.21"
     mysql: "npm:2.18.1"
-    mysql2: "npm:3.6.0"
+    mysql2: "npm:3.9.7"
     passport-google-oauth2: "npm:0.2.0"
     pg: "npm:8.11.1"
     react: "npm:^18.2.0"
@@ -21258,7 +21258,7 @@ __metadata:
     "@strapi/strapi": "npm:4.21.0"
     lodash: "npm:4.17.21"
     mysql: "npm:2.18.1"
-    mysql2: "npm:3.6.0"
+    mysql2: "npm:3.9.7"
     passport-google-oauth2: "npm:0.2.0"
     pg: "npm:8.11.1"
     react: "npm:^18.2.0"
@@ -23496,7 +23496,7 @@ __metadata:
   resolution: "multistream@npm:4.1.0"
   dependencies:
     once: "npm:^1.4.0"
-    readable-stream: "npm:^3.6.0"
+    readable-stream: "npm:^3.9.7"
   checksum: 305c49a1aadcb7f63f64d8ca2bb6e7852e5f7dba94c7329e9a72ce53cd0046686b71668dc1adbf123f17d2dd107765fc946e64c36a26b15c470a3146ea3bc923
   languageName: node
   linkType: hard
@@ -23508,9 +23508,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mysql2@npm:3.6.0":
-  version: 3.6.0
-  resolution: "mysql2@npm:3.6.0"
+"mysql2@npm:3.9.7":
+  version: 3.9.7
+  resolution: "mysql2@npm:3.9.7"
   dependencies:
     denque: "npm:^2.1.0"
     generate-function: "npm:^2.3.1"
@@ -26101,7 +26101,7 @@ __metadata:
   version: 1.5.1
   resolution: "pumpify@npm:1.5.1"
   dependencies:
-    duplexify: "npm:^3.6.0"
+    duplexify: "npm:^3.9.7"
     inherits: "npm:^2.0.3"
     pump: "npm:^2.0.0"
   checksum: 5d11a99f320dc2a052610399bac6d03db0a23bc23b23aa2a7d0adf879da3065a55134b975db66dc46bc79f54af3dd575d8119113a0a5b311a00580e1f053896b

@@ -4053,7 +4053,7 @@ __metadata:
   resolution: "are-we-there-yet@npm:3.0.1"
   dependencies:
     delegates: "npm:^1.0.0"
-    readable-stream: "npm:^3.6.0"
+    readable-stream: "npm:^3.9.7"
   checksum: 390731720e1bf9ed5d0efc635ea7df8cbc4c90308b0645a932f06e8495a0bf1ecc7987d3b97e805f62a17d6c4b634074b25200aa4d149be2a7b17250b9744bc4
   languageName: node
   linkType: hard
@@ -4626,7 +4626,7 @@ __metadata:
     is-binary-path: "npm:~2.1.0"
     is-glob: "npm:~4.0.1"
     normalize-path: "npm:~3.0.0"
-    readdirp: "npm:~3.6.0"
+    readdirp: "npm:~3.9.7"
   dependenciesMeta:
     fsevents:
       optional: true
@@ -9466,8 +9466,8 @@ __metadata:
   linkType: hard
 
 "readable-stream@npm:^3.0.6":
-  version: 3.6.0
-  resolution: "readable-stream@npm:3.6.0"
+  version: 3.9.7
+  resolution: "readable-stream@npm:3.9.7"
   dependencies:
     inherits: "npm:^2.0.3"
     string_decoder: "npm:^1.1.1"
@@ -9476,7 +9476,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:^3.6.0":
+"readable-stream@npm:^3.9.7":
   version: 3.6.2
   resolution: "readable-stream@npm:3.6.2"
   dependencies:
@@ -9487,9 +9487,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readdirp@npm:~3.6.0":
-  version: 3.6.0
-  resolution: "readdirp@npm:3.6.0"
+"readdirp@npm:~3.9.7":
+  version: 3.9.7
+  resolution: "readdirp@npm:3.9.7"
   dependencies:
     picomatch: "npm:^2.2.1"
   checksum: 196b30ef6ccf9b6e18c4e1724b7334f72a093d011a99f3b5920470f0b3406a51770867b3e1ae9711f227ef7a7065982f6ee2ce316746b2cb42c88efe44297fe7
