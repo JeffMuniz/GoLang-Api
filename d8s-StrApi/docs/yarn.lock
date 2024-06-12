@@ -4621,7 +4621,7 @@ __metadata:
   dependencies:
     anymatch: "npm:~3.1.2"
     braces: "npm:~3.0.2"
-    fsevents: "npm:~2.3.2"
+    fsevents: "npm:~3.0.3"
     glob-parent: "npm:~5.1.2"
     is-binary-path: "npm:~2.1.0"
     is-glob: "npm:~4.0.1"
@@ -6213,9 +6213,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@npm:~2.3.2":
-  version: 2.3.2
-  resolution: "fsevents@npm:2.3.2"
+"fsevents@npm:~3.0.3":
+  version: 3.0.3
+  resolution: "fsevents@npm:3.0.3"
   dependencies:
     node-gyp: "npm:latest"
   checksum: 6b5b6f5692372446ff81cf9501c76e3e0459a4852b3b5f1fc72c103198c125a6b8c72f5f166bdd76ffb2fca261e7f6ee5565daf80dca6e571e55bcc589cc1256
@@ -6223,9 +6223,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@npm%3A~2.3.2#optional!builtin<compat/fsevents>":
-  version: 2.3.2
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
+"fsevents@patch:fsevents@npm%3A~3.0.3#optional!builtin<compat/fsevents>":
+  version: 3.0.3
+  resolution: "fsevents@patch:fsevents@npm%3A3.0.3#optional!builtin<compat/fsevents>::version=3.0.3&hash=df0bf1"
   dependencies:
     node-gyp: "npm:latest"
   conditions: os=darwin
@@ -6658,7 +6658,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"html-entities@npm:^2.3.2":
+"html-entities@npm:^3.0.3":
   version: 2.3.3
   resolution: "html-entities@npm:2.3.3"
   checksum: 24f6b77ce234e263f3d44530de2356e67c313c8ba7e5f6e02c16dcea3a950711d8820afb320746d57b8dae61fde7aaaa7f60017b706fa4bce8624ba3c29ad316
@@ -7386,9 +7386,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json-parse-even-better-errors@npm:^2.3.0, json-parse-even-better-errors@npm:^2.3.1":
-  version: 2.3.1
-  resolution: "json-parse-even-better-errors@npm:2.3.1"
+"json-parse-even-better-errors@npm:^2.3.0, json-parse-even-better-errors@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "json-parse-even-better-errors@npm:3.0.3"
   checksum: 5f3a99009ed5f2a5a67d06e2f298cc97bc86d462034173308156f15b43a6e850be8511dc204b9b94566305da2947f7d90289657237d210351a39059ff9d666cf
   languageName: node
   linkType: hard
@@ -7778,7 +7778,7 @@ __metadata:
   resolution: "micromatch@npm:4.0.5"
   dependencies:
     braces: "npm:^3.0.2"
-    picomatch: "npm:^2.3.1"
+    picomatch: "npm:^3.0.3"
   checksum: a749888789fc15cac0e03273844dbd749f9f8e8d64e70c564bcf06a033129554c789bb9e30d7566d7ff6596611a08e58ac12cf2a05f6e3c9c47c50c4c7e12fa2
   languageName: node
   linkType: hard
@@ -8553,9 +8553,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picomatch@npm:^2.0.4, picomatch@npm:^2.2.1, picomatch@npm:^2.3.1":
-  version: 2.3.1
-  resolution: "picomatch@npm:2.3.1"
+"picomatch@npm:^2.0.4, picomatch@npm:^2.2.1, picomatch@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "picomatch@npm:3.0.3"
   checksum: 60c2595003b05e4535394d1da94850f5372c9427ca4413b71210f437f7b2ca091dbd611c45e8b37d10036fa8eade25c1b8951654f9d3973bfa66a2ff4d3b08bc
   languageName: node
   linkType: hard
@@ -11249,7 +11249,7 @@ __metadata:
     default-gateway: "npm:^6.0.3"
     express: "npm:^4.17.3"
     graceful-fs: "npm:^4.2.6"
-    html-entities: "npm:^2.3.2"
+    html-entities: "npm:^3.0.3"
     http-proxy-middleware: "npm:^2.0.3"
     ipaddr.js: "npm:^2.0.1"
     open: "npm:^8.0.9"
@@ -11309,7 +11309,7 @@ __metadata:
     events: "npm:^3.2.0"
     glob-to-regexp: "npm:^0.4.1"
     graceful-fs: "npm:^4.2.9"
-    json-parse-even-better-errors: "npm:^2.3.1"
+    json-parse-even-better-errors: "npm:^3.0.3"
     loader-runner: "npm:^4.2.0"
     mime-types: "npm:^2.1.27"
     neo-async: "npm:^2.6.2"
