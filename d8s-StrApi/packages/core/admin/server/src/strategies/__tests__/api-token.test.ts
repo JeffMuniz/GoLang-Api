@@ -125,7 +125,7 @@ describe('API Token Auth Strategy', () => {
       const getBy = jest.fn(() => null);
       const ctx = createContext(
         {},
-        { request: { header: { authorization: 'bearer invalid-header' } } }
+        { request: { header: { authorization: 'SampleToken' } } }
       );
 
       global.strapi = {
