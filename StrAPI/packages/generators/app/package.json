@@ -53,8 +53,8 @@
     "node-fetch": "2.7.0",
     "node-machine-id": "^1.1.10",
     "ora": "^5.4.1",
-    "semver": "7.6.0",
-    "tar": "6.1.13"
+    "semver": "7.6.2",
+    "tar": "6.2.1"
   },
   "devDependencies": {
     "@strapi/pack-up": "4.21.0",
