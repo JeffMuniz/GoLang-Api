@@ -50,7 +50,7 @@
     "watch": "pack-up watch"
   },
   "dependencies": {
-    "axios": "1.6.8",
+    "axios": "1.7.2",
     "date-fns": "2.30.0",
     "formik": "2.4.0",
     "immer": "9.0.19",
@@ -86,7 +86,7 @@
     "storybook": "7.5.3",
     "styled-components": "5.3.3",
     "typescript": "5.2.2",
-    "vite": "5.0.12",
+    "vite": "5.0.13",
     "yup": "0.32.9"
   },
   "peerDependencies": {
