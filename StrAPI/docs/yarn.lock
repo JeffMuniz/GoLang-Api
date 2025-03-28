@@ -5961,9 +5961,9 @@ __metadata:
   linkType: hard
 
 "eta@npm:^1.12.3":
-  version: 1.12.3
-  resolution: "eta@npm:1.12.3"
-  checksum: 7319986d4cad453e17c2bff84ccf01fb56af5d3326aa37844a701fc628f090636ec2771d355052c8a9864c60323b7c2279c64e60c080f0f5a2ff46037601612b
+  version: 1.14.2
+  resolution: "eta@npm:1.14.2"
+  checksum: 25ade38e9f1d7231511b19cd4fb30cf8c81794a7f01623b3cfb7f20a489cbec04fe0ae5ba0c87740d3944fbc94cb061fd5fe797dd81ffdb290bdf204e6bfda0f
   languageName: node
   linkType: hard
 
