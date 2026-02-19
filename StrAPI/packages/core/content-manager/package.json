@@ -53,8 +53,8 @@
     "@strapi/utils": "4.21.0",
     "koa": "2.15.4",
     "koa-bodyparser": "4.4.1",
-    "lodash": "4.17.21",
-    "qs": "6.11.1"
+    "lodash": "4.17.23",
+    "qs": "6.14.2"
   },
   "devDependencies": {
     "@strapi/pack-up": "workspace:*",
