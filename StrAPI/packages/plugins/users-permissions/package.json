@@ -58,7 +58,7 @@
     "jwk-to-pem": "2.0.5",
     "koa": "2.15.4",
     "koa2-ratelimit": "^1.1.2",
-    "lodash": "4.17.21",
+    "lodash": "4.17.23",
     "prop-types": "^15.8.1",
     "purest": "4.0.2",
     "react-intl": "6.4.1",
