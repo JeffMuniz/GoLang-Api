@@ -36,10 +36,10 @@
     "watch": "pack-up watch"
   },
   "dependencies": {
-    "@casl/ability": "6.5.0",
+    "@casl/ability": "6.7.5",
     "@strapi/utils": "4.21.0",
-    "lodash": "4.17.21",
-    "qs": "6.11.1",
+    "lodash": "4.17.23",
+    "qs": "6.14.2",
     "sift": "16.0.1"
   },
   "devDependencies": {
