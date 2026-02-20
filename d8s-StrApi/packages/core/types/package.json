@@ -43,7 +43,7 @@
     "watch": "pack-up watch"
   },
   "dependencies": {
-    "@casl/ability": "6.5.0",
+    "@casl/ability": "6.7.5",
     "@koa/cors": "5.0.0",
     "@koa/router": "10.1.1",
     "@strapi/database": "4.21.0",
