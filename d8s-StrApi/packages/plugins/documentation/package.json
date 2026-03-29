@@ -61,7 +61,7 @@
     "react-intl": "6.4.1",
     "react-query": "3.39.3",
     "swagger-ui-dist": "4.19.0",
-    "yaml": "1.10.2",
+    "yaml": "1.10.3",
     "yup": "0.32.9"
   },
   "devDependencies": {
