@@ -38,7 +38,7 @@
   "dependencies": {
     "@casl/ability": "6.5.0",
     "@strapi/utils": "4.21.0",
-    "lodash": "4.17.21",
+    "lodash": "4.18.1",
     "qs": "6.11.1",
     "sift": "16.0.1"
   },
