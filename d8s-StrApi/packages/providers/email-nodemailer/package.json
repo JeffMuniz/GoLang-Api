@@ -55,8 +55,8 @@
     "watch": "pack-up watch"
   },
   "dependencies": {
-    "lodash": "4.17.21",
-    "nodemailer": "6.9.9"
+    "lodash": "4.18.1",
+    "nodemailer": "8.0.5"
   },
   "devDependencies": {
     "@strapi/pack-up": "4.21.0",
