@@ -61,7 +61,7 @@
     "react-intl": "6.4.1"
   },
   "devDependencies": {
-    "@strapi/strapi": "4.21.0",
+    "@strapi/strapi": "5.37.0",
     "@testing-library/react": "14.0.0",
     "@testing-library/user-event": "14.4.3",
     "@types/styled-components": "5.1.32",

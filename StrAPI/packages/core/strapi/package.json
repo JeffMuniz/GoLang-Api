@@ -113,7 +113,7 @@
   "dependencies": {
     "@koa/cors": "5.0.0",
     "@koa/router": "10.1.1",
-    "@strapi/admin": "4.21.0",
+    "@strapi/admin": "5.33.3",
     "@strapi/content-releases": "4.21.0",
     "@strapi/data-transfer": "4.21.0",
     "@strapi/database": "4.21.0",
@@ -123,7 +123,7 @@
     "@strapi/pack-up": "4.21.0",
     "@strapi/permissions": "4.21.0",
     "@strapi/plugin-content-manager": "4.21.0",
-    "@strapi/plugin-content-type-builder": "4.21.0",
+    "@strapi/plugin-content-type-builder": "4.26.1",
     "@strapi/plugin-email": "4.21.0",
     "@strapi/plugin-upload": "4.22.0",
     "@strapi/types": "4.21.0",
