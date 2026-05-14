@@ -42,7 +42,7 @@
     "react-intl": "6.4.1"
   },
   "devDependencies": {
-    "@strapi/strapi": "4.21.0",
+    "@strapi/strapi": "5.37.0",
     "@types/react": "18.2.39",
     "@types/react-dom": "18.2.17",
     "@types/react-router-dom": "^5.3.3",
