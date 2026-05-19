@@ -77,7 +77,7 @@
   },
   "devDependencies": {
     "@strapi/pack-up": "4.21.0",
-    "@strapi/strapi": "4.21.0",
+    "@strapi/strapi": "5.37.0",
     "@strapi/types": "4.21.0",
     "@testing-library/react": "14.0.0",
     "@testing-library/react-hooks": "8.0.1",
