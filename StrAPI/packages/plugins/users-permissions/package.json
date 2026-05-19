@@ -69,7 +69,7 @@
   },
   "devDependencies": {
     "@strapi/pack-up": "4.21.0",
-    "@strapi/strapi": "5.12.0",
+    "@strapi/strapi": "5.37.0",
     "@testing-library/dom": "9.2.0",
     "@testing-library/react": "14.0.0",
     "@testing-library/user-event": "14.4.3",
